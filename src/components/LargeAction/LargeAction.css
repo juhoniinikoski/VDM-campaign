@@ -1,0 +1,16 @@
+
+.large-image-container {
+  height: 250px;
+  flex: 1;
+  background-color: grey;
+}
+
+.large-item-container {
+  margin-right: 24px;
+}
+
+@media screen and (max-width: 996px) {
+  .large-item-container {
+    margin: 0
+  }
+}
