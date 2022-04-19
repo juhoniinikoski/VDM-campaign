@@ -30,7 +30,7 @@
     "prettier": "^2.5.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "ESLINT_NO_DEV_ERRORS='true' react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint --fix --ext .ts --ext .tsx .",
     "test": "jest",
