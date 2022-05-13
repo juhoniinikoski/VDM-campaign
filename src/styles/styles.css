@@ -12,12 +12,11 @@ h1 {
 }
 
 .main-container {
+  align-self: center;
   display: flex;
   font-weight: normal;
   align-items: center;
   flex-direction: column;
-  margin: auto;
-  margin-top: 100px;
 }
 
 @media screen and (max-width: 1336px) {
