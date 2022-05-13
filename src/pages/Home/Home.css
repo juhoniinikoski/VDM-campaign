@@ -28,7 +28,7 @@ button:hover {
 .hero-container {
   flex: 1;
   /* background-color: aqua; */
-  max-width: 900px;
+  max-width: 1100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,9 +38,8 @@ button:hover {
 
 .container {
   flex: 1;
-  /* background-color: aqua; */
   width: 100%;
-  max-width: 900px;
+  max-width: 1100px;
   margin-top: 192px;
   display: flex;
   align-items: flex-start;
@@ -48,9 +47,7 @@ button:hover {
 }
 
 .hero-media-container {
-  background-color: blue;
-  height: 300px;
-  width: 500px;
+  height: 450px;
 }
 
 .hero-text-container {

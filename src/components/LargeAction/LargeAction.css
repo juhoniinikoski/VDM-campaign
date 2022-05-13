@@ -3,10 +3,26 @@
   height: 250px;
   flex: 1;
   background-color: grey;
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  right: -9999px;
+  bottom: -9999px;
+  margin: auto;
 }
 
 .large-item-container {
   margin-right: 24px;
+  text-align: center;
+}
+
+.large-item-container:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 996px) {
