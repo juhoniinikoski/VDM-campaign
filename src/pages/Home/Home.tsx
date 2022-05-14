@@ -5,6 +5,11 @@ import doctorPhoto from '../../content/pexels-cottonbro-7579831.jpg';
 import blogPhoto from '../../content/injection-gacb88f3b0_1920.jpg';
 import survey from '../../content/pexels-edward-jenner-4031321.jpg';
 import './Home.css';
+import ScrollToTop from '../../components/ScrollToTop';
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 
 const Home = (): JSX.Element => {
   const [fadeProp, setFadeProp] = React.useState({
@@ -12,6 +17,9 @@ const Home = (): JSX.Element => {
   });
 
   const [overlay, setOverlay] = React.useState(false);
+  const [isVisible, setVisible] = React.useState(false);
+
+  const domRef = React.useRef<any>();
 
   React.useEffect(() => {
     const timeout = setInterval(() => {
@@ -21,6 +29,19 @@ const Home = (): JSX.Element => {
 
     return () => clearInterval(timeout);
   }, [fadeProp]);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setVisible(true);
+        observer.unobserve(domRef.current);
+      }
+    });
+
+    observer.observe(domRef.current);
+
+    return () => domRef.current && observer.unobserve(domRef.current);
+  }, []);
 
   interface Action {
     title: string;
@@ -54,7 +75,7 @@ const Home = (): JSX.Element => {
   ];
 
   return (
-    <div>
+    <ScrollToTop>
       <section
         className="full-page-container"
         style={{ backgroundImage: 'url(' + require('../../content/baby-g91bdd9f2d_1920.jpg') + ')' }}
@@ -66,7 +87,7 @@ const Home = (): JSX.Element => {
       <Layout>
         <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
           <section className="container" style={{ flexDirection: 'column' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+            <div ref={domRef} className={isVisible ? 'is-visible' : 'hidden'}>
               <h2 style={{ marginBottom: 36 }}>Joku toinen alaotsikko</h2>
               <div className="action-container">
                 {current.map((a: Action, i: number) => (
@@ -84,7 +105,7 @@ const Home = (): JSX.Element => {
           </section>
         </div>
       </Layout>
-    </div>
+    </ScrollToTop>
   );
 };
 

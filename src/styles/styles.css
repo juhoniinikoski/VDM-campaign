@@ -16,21 +16,10 @@ h1 {
   display: flex;
   font-weight: normal;
   align-items: center;
+  justify-content: space-between;
   flex-direction: column;
-}
-
-@media screen and (max-width: 1336px) {
-
-  .main-container {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 450px) {
-
-  .main-container {
-    width: 96%;
-  }
-
+  min-height: 100vh;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 

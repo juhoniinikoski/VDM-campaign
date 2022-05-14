@@ -1,0 +1,35 @@
+textarea {
+  resize: none;
+  background-color: #F1F3F4;
+  display: block;
+  margin: 0px;
+  margin-top: 16px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-family: 'Source Sans 3';
+  font-weight: normal;
+  font-size: 16px;
+  padding: 24px;
+}
+
+textarea::placeholder {
+  color: #A6A6A6;
+}
+
+.send-button {
+  background-color: transparent;
+  border-style: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: center;
+  font-family: 'Source Sans 3';
+  font-weight: normal;
+  font-size: 16px;
+  color: black
+}
+
+.send-button:disabled {
+  color: #A6A6A6;
+  cursor: not-allowed;
+}

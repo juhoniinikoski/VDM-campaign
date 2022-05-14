@@ -1,0 +1,22 @@
+.qa-container {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ask-doctor-header {
+  margin-top: 96px;
+  margin-bottom: 24px;
+  max-width: 900px;
+}
+
+.round-photo-container {
+  height: 120px;
+  width: 120px;
+  border-radius: 100px;
+  background-color: aliceblue;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 24px;
+}
