@@ -14,6 +14,7 @@
   right: -9999px;
   bottom: -9999px;
   margin: auto;
+  max-height: 100%;
 }
 
 .large-item-container {
@@ -26,7 +27,22 @@
 }
 
 @media screen and (max-width: 996px) {
+
+  .image {
+    max-height: none;
+    max-width: 100%;
+  }
+
   .large-item-container {
-    margin: 0
+    margin: 0;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+
+  .image {
+    max-width: none;
+    max-height: 100%;
   }
 }

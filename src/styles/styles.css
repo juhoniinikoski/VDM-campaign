@@ -16,10 +16,18 @@ h1 {
   display: flex;
   font-weight: normal;
   align-items: center;
+  height: 100vh;
   justify-content: space-between;
   flex-direction: column;
-  min-height: 100vh;
   padding-left: 32px;
   padding-right: 32px;
+}
+
+@media screen and (max-width: 996px) {
+
+  .main-container {
+    height: fit-content;
+  }
+
 }
 

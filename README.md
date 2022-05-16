@@ -1,4 +1,4 @@
-# React skeleton to quick start React projects
+# VDM/VJP Project page
 
 ## How to use
 
@@ -7,15 +7,6 @@
 2. Remove the version tracking from the skeleton by running `rm -rf .git` in the root directory as well.
 
 3. Run `npm start` to start the app. After the app has started you should be able to access it at http://localhost:3000/.
-
-3. Happy coding!
-
-## Includes
-
-* Typescript support
-* Jest testing library
-* Eslint
-* Prettier
 
 ## Available Scripts
 

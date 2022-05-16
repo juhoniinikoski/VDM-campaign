@@ -4,8 +4,8 @@ import Layout from '../../components/Layout';
 import doctorPhoto from '../../content/pexels-cottonbro-7579831.jpg';
 import blogPhoto from '../../content/injection-gacb88f3b0_1920.jpg';
 import survey from '../../content/pexels-edward-jenner-4031321.jpg';
-import './Home.css';
 import ScrollToTop from '../../components/ScrollToTop';
+import './Home.css';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
@@ -56,7 +56,7 @@ const Home = (): JSX.Element => {
       description: 'Lorem ipsum dolor sit amet, vim cu nobis laudem assueverit',
       // image: '',
       image: blogPhoto,
-      slug: '',
+      slug: 'blog',
     },
     {
       title: 'Lääkäri vastaa',

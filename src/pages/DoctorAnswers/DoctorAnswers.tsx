@@ -52,7 +52,7 @@ const DoctorAnswers = () => {
           </div>
           <i>Leena Lemminkäinen, yleislääkäri</i>
         </div>
-        <div className="qa-container" style={{ display: 'flex', flexDirection: 'column' }}>
+        <div className="qa-container" style={{ display: 'flex', flexDirection: 'column', marginBottom: 48 }}>
           {questionAndAnswers.map((a) =>
             a.author === 'questioner' ? <b key={a.text}>{a.text}</b> : <p key={a.text}>{a.text}</p>,
           )}

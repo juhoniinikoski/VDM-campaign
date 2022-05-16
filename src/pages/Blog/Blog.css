@@ -1,0 +1,39 @@
+.blog-container {
+  margin-top: 96px;
+  width: 100%;
+  display: flex;
+}
+
+.blog-image {
+  height: 600px;
+  width: 50%;
+  position: relative;
+  margin-right: 16px;
+  overflow: hidden;
+  display: flex;
+  background-color: aliceblue;
+}
+
+.blog-text {
+  margin-left: 16px;
+  width: 50%;
+  background-color: aliceblue;
+}
+
+@media screen and (max-width: 996px) {
+
+  .blog-container {
+    flex-direction: column;
+  }
+
+  .blog-image {
+    width: 100%;
+    margin: 0;
+  }
+
+  .blog-text {
+    width: 100%;
+    margin: 0;
+  }
+  
+}
