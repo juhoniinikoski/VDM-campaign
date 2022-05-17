@@ -20,6 +20,7 @@
 .large-item-container {
   margin-right: 24px;
   text-align: center;
+  flex: 1;
 }
 
 .large-item-container:hover {

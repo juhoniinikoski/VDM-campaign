@@ -18,10 +18,8 @@ const LargeAction = ({ title, description, image, style, index, slug }: Props) =
 
   return (
     <div onClick={handleClick} className="large-item-container" style={index === 2 ? { ...style, margin: 0 } : style}>
-      <div className="large-image-container">
-        {image !== '' && <img src={image} className="image"></img>}
-      </div>
-      <h3>{title}</h3>
+      <div className="large-image-container">{image !== '' && <img src={image} className="image"></img>}</div>
+      <h3 style={{ marginBottom: 0 }}>{title}</h3>
       <p>{description}</p>
     </div>
   );

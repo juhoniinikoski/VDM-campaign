@@ -52,25 +52,22 @@ const Home = (): JSX.Element => {
 
   const current: Action[] = [
     {
-      title: 'Bloggaaja-yhteistyö',
-      description: 'Lorem ipsum dolor sit amet, vim cu nobis laudem assueverit',
-      // image: '',
+      title: 'Rokotetietoa',
+      description: 'Tutkimuksia ja artikkeleita rokotteista. Kerättynä sinua varten.',
+      image: survey,
+      slug: 'articles',
+    },
+    {
+      title: 'Miten puhun lapsilleni rokotuksista?',
+      description: 'Esittelemme parhaat keinot puhua lapsille rokotuksista.',
       image: blogPhoto,
       slug: 'blog',
     },
     {
       title: 'Lääkäri vastaa',
-      description: 'Lorem ipsum dolor sit amet, vim cu nobis laudem assueverit',
-      // image: '',
+      description: 'Mietityttävätkö rokotteet? Lääkärimme vastaa juuri sinua mietityttäviin kysymyksiin.',
       image: doctorPhoto,
       slug: 'ask-doctor',
-    },
-    {
-      title: 'Tutkimuksia',
-      description: 'Lorem ipsum dolor sit amet, vim cu nobis laudem assueverit',
-      // image: '',
-      image: survey,
-      slug: '',
     },
   ];
 
@@ -81,10 +78,10 @@ const Home = (): JSX.Element => {
         style={{ backgroundImage: 'url(' + require('../../content/baby-g91bdd9f2d_1920.jpg') + ')' }}
       >
         <div className={overlay ? 'container-overlay' : 'overlay'}>
-          <h1 className={fadeProp.fade}>Sinunkin puolestasi rokotettu.</h1>
+          <h1 className={fadeProp.fade}>Sinun puolestasi rokotettu.</h1>
         </div>
       </section>
-      <Layout>
+      <Layout showButton={false}>
         <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
           <section className="container" style={{ flexDirection: 'column' }}>
             <div ref={domRef} className={isVisible ? 'is-visible' : 'hidden'}>

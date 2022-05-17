@@ -1,11 +1,36 @@
 import * as React from 'react';
+import { BsArrowLeftShort } from 'react-icons/bs';
 
-const Layout: React.FunctionComponent = ({ children }) => {
+interface Props {
+  children: JSX.Element;
+  showButton: boolean;
+}
+
+const Layout = ({ children, showButton }: Props) => {
   return (
-    <div className="main-container">
-      {children}
-      <div style={{ height: 70, width: '100%', textAlign: 'center' }}>
-        <p>©2022 #sinunkinpuolestasirokotettu</p>
+    <div>
+      {showButton && (
+        <div
+          style={{
+            width: '100%',
+            maxWidth: 900,
+            marginTop: 64,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            marginBottom: 48,
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <BsArrowLeftShort size={20} />
+          <a href="/">Takaisin</a>
+        </div>
+      )}
+      <div className="main-container">
+        {children}
+        <div style={{ height: 70, width: '100%', textAlign: 'center' }}>
+          <p>©2022 #sinunpuolestasirokotettu</p>
+        </div>
       </div>
     </div>
   );

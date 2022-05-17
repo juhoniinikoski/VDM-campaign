@@ -40,23 +40,25 @@ const questionAndAnswers: QuestionType[] = [
 const DoctorAnswers = () => {
   return (
     <ScrollToTop>
-      <Layout>
-        <div className="ask-doctor-header">
-          <h3 style={{ marginBottom: 48 }}>
-            Lääkäri vastaa on palsta, jossa juuri sinä voit kysyä mieltä askarruttavista, rokotteisiin liittyvistä
-            asioista. Sitä mukaa, kun lääkärimme ovat vastanneet esitettyihin kysymyksiin, julkaistaan ne tällä
-            sivustolla.
-          </h3>
-          <div className="round-photo-container">
-            <img className="image" src={doctorImg} style={{ maxHeight: '100%' }} />
+      <Layout showButton>
+        <div>
+          <div className="ask-doctor-header">
+            <h3 style={{ marginBottom: 48 }}>
+              Lääkäri vastaa on palsta, jossa juuri sinä voit kysyä mieltä askarruttavista, rokotteisiin liittyvistä
+              asioista. Sitä mukaa, kun lääkärimme ovat vastanneet esitettyihin kysymyksiin, julkaistaan ne tällä
+              sivustolla.
+            </h3>
+            <div className="round-photo-container">
+              <img className="image" src={doctorImg} style={{ maxHeight: '100%' }} />
+            </div>
+            <i>Leena Lemminkäinen, yleislääkäri</i>
           </div>
-          <i>Leena Lemminkäinen, yleislääkäri</i>
-        </div>
-        <div className="qa-container" style={{ display: 'flex', flexDirection: 'column', marginBottom: 48 }}>
-          {questionAndAnswers.map((a) =>
-            a.author === 'questioner' ? <b key={a.text}>{a.text}</b> : <p key={a.text}>{a.text}</p>,
-          )}
-          <QuestionForm />
+          <div className="qa-container" style={{ display: 'flex', flexDirection: 'column', marginBottom: 48 }}>
+            {questionAndAnswers.map((a) =>
+              a.author === 'questioner' ? <b key={a.text}>{a.text}</b> : <p key={a.text}>{a.text}</p>,
+            )}
+            <QuestionForm />
+          </div>
         </div>
       </Layout>
     </ScrollToTop>
