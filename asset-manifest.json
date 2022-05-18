@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/vdm-campaign/static/css/main.6b04497b.css",
+    "main.js": "/vdm-campaign/static/js/main.1e0d4fbb.js",
+    "static/media/pexels-edward-jenner-4031321.jpg": "/vdm-campaign/static/media/pexels-edward-jenner-4031321.17e838d74c28caab4fd8.jpg",
+    "static/media/pexels-cottonbro-7579831.jpg": "/vdm-campaign/static/media/pexels-cottonbro-7579831.ad18a8ab4b7584776128.jpg",
+    "static/media/80vrokote.png": "/vdm-campaign/static/media/80vrokote.010c94bff2403084f592.png",
+    "static/media/covidyhdistelma.png": "/vdm-campaign/static/media/covidyhdistelma.fd34cc3008d8dc53a8e8.png",
+    "static/media/injection-gacb88f3b0_1920.jpg": "/vdm-campaign/static/media/injection-gacb88f3b0_1920.9b3e5431a6c612c28d01.jpg",
+    "static/media/lastenohjelma.png": "/vdm-campaign/static/media/lastenohjelma.630824cd10bf5b512680.png",
+    "static/media/baby-g91bdd9f2d_1920.jpg": "/vdm-campaign/static/media/baby-g91bdd9f2d_1920.4973db0a60ae235eedc2.jpg",
+    "static/media/pexels-antoni-shkraba-5215017 1.png": "/vdm-campaign/static/media/pexels-antoni-shkraba-5215017 1.ae5c07d30de8913ea032.png",
+    "static/media/thl.png": "/vdm-campaign/static/media/thl.f1519e608adb1300063e.png",
+    "index.html": "/vdm-campaign/index.html",
+    "main.6b04497b.css.map": "/vdm-campaign/static/css/main.6b04497b.css.map",
+    "main.1e0d4fbb.js.map": "/vdm-campaign/static/js/main.1e0d4fbb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6b04497b.css",
+    "static/js/main.1e0d4fbb.js"
+  ]
+}
