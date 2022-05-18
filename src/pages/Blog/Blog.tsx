@@ -3,17 +3,28 @@ import CommentForm from '../../components/CommentForm/CommentForm';
 import Layout from '../../components/Layout';
 import ScrollToTop from '../../components/ScrollToTop';
 import blogPhoto from '../../content/injection-gacb88f3b0_1920.jpg';
+import { FcLike, FcLikePlaceholder } from 'react-icons/fc';
 import './Blog.css';
 
 function Blog() {
   interface Message {
     time: Date;
     message: string;
+    liked: boolean;
   }
 
   const [messages, setMessages] = React.useState<Message[]>([]);
 
-  console.log(messages);
+  const handleLike = (index: number) => {
+    console.log('handlattu like');
+    const newMessages = messages.map((m, i) => {
+      if (i === index) {
+        return { ...m, liked: !m.liked };
+      }
+      return m;
+    });
+    setMessages(newMessages);
+  };
 
   return (
     <ScrollToTop>
@@ -60,10 +71,26 @@ function Blog() {
             <h3 style={{ marginRight: 8 }}>Kommentit</h3>
             <h3 style={{ color: 'grey' }}>{messages.length}</h3>
           </div>
-          {messages.map((m) => (
-            <div key={m.time.toLocaleString()}>
-              <p style={{ marginBottom: 0, color: 'grey' }}>{m.time.toLocaleString()}</p>
-              <p style={{ marginTop: 0 }}>{m.message}</p>
+          {messages.map((m, i) => (
+            <div
+              key={m.time.toLocaleString()}
+              style={{
+                padding: 0,
+                width: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}
+            >
+              <div>
+                <p style={{ marginBottom: 0, color: 'grey' }}>{m.time.toLocaleString()}</p>
+                <p style={{ marginTop: 0 }}>{m.message}</p>
+              </div>
+              {m.liked ? (
+                <FcLike style={{ cursor: 'pointer' }} size={20} onClick={() => handleLike(i)} />
+              ) : (
+                <FcLikePlaceholder style={{ cursor: 'pointer' }} size={20} onClick={() => handleLike(i)} />
+              )}
             </div>
           ))}
           <CommentForm messages={messages} setMessages={setMessages} />

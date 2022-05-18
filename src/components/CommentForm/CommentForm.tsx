@@ -6,6 +6,7 @@ import '../QuestionForm/QuestionForm.css';
 interface Message {
   time: Date;
   message: string;
+  liked: boolean;
 }
 
 interface Props {
@@ -35,6 +36,7 @@ const CommentForm = ({ messages, setMessages }: Props) => {
     setTimeout(() => {
       const newMessage = {
         message: message,
+        liked: false,
         time: new Date(),
       };
       setMessages([...messages, newMessage]);
