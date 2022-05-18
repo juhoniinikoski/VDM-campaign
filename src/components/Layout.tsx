@@ -10,18 +10,7 @@ const Layout = ({ children, showButton }: Props) => {
   return (
     <div>
       {showButton && (
-        <div
-          style={{
-            width: '100%',
-            maxWidth: 900,
-            marginTop: 64,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            marginBottom: 48,
-            display: 'flex',
-            alignItems: 'center',
-          }}
-        >
+        <div className="back-button">
           <BsArrowLeftShort size={20} />
           <a href="/VDM-campaign">Takaisin</a>
         </div>
