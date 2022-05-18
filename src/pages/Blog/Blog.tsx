@@ -6,15 +6,14 @@ import blogPhoto from '../../content/injection-gacb88f3b0_1920.jpg';
 import './Blog.css';
 
 function Blog() {
-
   interface Message {
     time: Date;
     message: string;
   }
 
-  const [messages, setMessages] = React.useState<Message[]>([])
+  const [messages, setMessages] = React.useState<Message[]>([]);
 
-  console.log(messages)
+  console.log(messages);
 
   return (
     <ScrollToTop>
@@ -57,15 +56,16 @@ function Blog() {
               <p>Julkaistu 16.5.2022</p>
             </section>
           </div>
-          <div style={{marginTop: 32, display: 'flex'}}>
-           <h3 style={{marginRight: 8}}>Kommentit</h3>
-           <h3 style={{color: 'grey'}}>{messages.length}</h3>
+          <div style={{ marginTop: 32, display: 'flex' }}>
+            <h3 style={{ marginRight: 8 }}>Kommentit</h3>
+            <h3 style={{ color: 'grey' }}>{messages.length}</h3>
           </div>
-          {messages.map((m) => 
+          {messages.map((m) => (
             <div key={m.time.toLocaleString()}>
-              <p style={{marginBottom: 0, color: 'grey'}}>{m.time.toLocaleString()}</p>
-              <p style={{marginTop: 0}}>{m.message}</p>
-            </div>)}
+              <p style={{ marginBottom: 0, color: 'grey' }}>{m.time.toLocaleString()}</p>
+              <p style={{ marginTop: 0 }}>{m.message}</p>
+            </div>
+          ))}
           <CommentForm messages={messages} setMessages={setMessages} />
         </div>
       </Layout>

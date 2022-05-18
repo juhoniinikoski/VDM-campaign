@@ -17,6 +17,8 @@ const QuestionForm = () => {
     setMessage(e.target.value);
   };
 
+  // empties the textarea
+  // timeout simulates api call
   const handleSubmit = (e: React.SyntheticEvent): void => {
     e.preventDefault();
     setSending(true);
@@ -27,12 +29,14 @@ const QuestionForm = () => {
     setStatusMessage('Kysymys lähetetty');
   };
 
+  // sets the message of the button
   const setStatusMessage = (message: string) => {
     setStatus(message);
     setTimeout(() => {
       setStatus('Lähetä');
     }, 3000);
   };
+
   return (
     <div style={{ display: 'flex', position: 'relative', flexDirection: 'column' }}>
       <textarea onChange={handleChange} value={message} placeholder="Kirjoita kysymyksesi lääkärillemme." rows={5} />

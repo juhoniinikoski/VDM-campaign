@@ -10,7 +10,7 @@ interface Message {
 
 interface Props {
   messages: Message[];
-  setMessages: React.Dispatch<React.SetStateAction<Message[]>>
+  setMessages: React.Dispatch<React.SetStateAction<Message[]>>;
 }
 
 const CommentForm = ({ messages, setMessages }: Props) => {
@@ -27,27 +27,31 @@ const CommentForm = ({ messages, setMessages }: Props) => {
     setMessage(e.target.value);
   };
 
+  // sets messages and empties the textarea
+  // timeout simulates api call
   const handleSubmit = (e: React.SyntheticEvent): void => {
     e.preventDefault();
     setSending(true);
     setTimeout(() => {
       const newMessage = {
         message: message,
-        time: new Date()
-      }
-      setMessages([...messages, newMessage])
+        time: new Date(),
+      };
+      setMessages([...messages, newMessage]);
       setMessage('');
       setSending(false);
     }, 1000);
     setStatusMessage('Kommentti lähetetty');
   };
 
+  // handles the button state
   const setStatusMessage = (message: string) => {
     setStatus(message);
     setTimeout(() => {
       setStatus('Kommentoi');
     }, 3000);
   };
+
   return (
     <div style={{ display: 'flex', position: 'relative', flexDirection: 'column' }}>
       <textarea onChange={handleChange} value={message} placeholder="Kirjoita kommenttisi." rows={3} />
