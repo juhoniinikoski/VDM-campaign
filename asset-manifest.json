@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/VDM-campaign/static/css/main.ba6bbc47.css",
-    "main.js": "/VDM-campaign/static/js/main.b9708f69.js",
+    "main.js": "/VDM-campaign/static/js/main.e63b0f42.js",
     "static/media/pexels-edward-jenner-4031321.jpg": "/VDM-campaign/static/media/pexels-edward-jenner-4031321.17e838d74c28caab4fd8.jpg",
     "static/media/pexels-cottonbro-7579831.jpg": "/VDM-campaign/static/media/pexels-cottonbro-7579831.ad18a8ab4b7584776128.jpg",
     "static/media/80vrokote.png": "/VDM-campaign/static/media/80vrokote.010c94bff2403084f592.png",
@@ -13,10 +13,10 @@
     "static/media/thl.png": "/VDM-campaign/static/media/thl.f1519e608adb1300063e.png",
     "index.html": "/VDM-campaign/index.html",
     "main.ba6bbc47.css.map": "/VDM-campaign/static/css/main.ba6bbc47.css.map",
-    "main.b9708f69.js.map": "/VDM-campaign/static/js/main.b9708f69.js.map"
+    "main.e63b0f42.js.map": "/VDM-campaign/static/js/main.e63b0f42.js.map"
   },
   "entrypoints": [
     "static/css/main.ba6bbc47.css",
-    "static/js/main.b9708f69.js"
+    "static/js/main.e63b0f42.js"
   ]
 }
