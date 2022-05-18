@@ -85,7 +85,7 @@ const Home = (): JSX.Element => {
         <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
           <section className="container" style={{ flexDirection: 'column' }}>
             <div ref={domRef} className={isVisible ? 'is-visible' : 'hidden'}>
-              <h2 style={{ marginBottom: 36 }}>Joku toinen alaotsikko</h2>
+              <h2 style={{ marginBottom: 36 }}>Tutustu kampanjaan</h2>
               <div className="action-container">
                 {current.map((a: Action, i: number) => (
                   <LargeAction
