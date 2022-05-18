@@ -23,7 +23,7 @@ const Layout = ({ children, showButton }: Props) => {
           }}
         >
           <BsArrowLeftShort size={20} />
-          <a href="/">Takaisin</a>
+          <a href="/VDM-campaign">Takaisin</a>
         </div>
       )}
       <div className="main-container">

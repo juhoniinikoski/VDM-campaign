@@ -1,5 +1,6 @@
 {
   "name": "vdm-campaign",
+  "homepage": "https://juhoniinikoski.github.io/VDM-campaign",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -28,6 +29,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.3",
+    "gh-pages": "^4.0.0",
     "prettier": "^2.5.1"
   },
   "scripts": {
@@ -35,7 +37,9 @@
     "build": "react-scripts build",
     "lint": "eslint --fix --ext .ts --ext .tsx .",
     "test": "jest",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "testEnvironment": "jsdom"
